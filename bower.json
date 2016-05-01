@@ -1,0 +1,26 @@
+{
+  "name": "jquery-environment",
+  "description": "jquery with awesome-buildtool boilerplate",
+  "main": "index.js",
+  "authors": [
+    "yohira0616"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "jquery",
+    "javascript",
+    "gulp",
+    "automation"
+  ],
+  "homepage": "https://github.com/yohira0616/jquery-environment",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.3"
+  }
+}

@@ -1,0 +1,7 @@
+@mixin myMixin{
+  background-color: greenyellow;
+}
+
+h1{
+  @include myMixin;
+}
