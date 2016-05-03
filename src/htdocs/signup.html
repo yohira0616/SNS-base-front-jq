@@ -6,9 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/signup.css">
 </head>
 <body>
+<div class="container">
+    <div class="col-sm-4 col-md-offset-4">
+    <div class="panel panel-default app-signup-panel">
+        <h3 class="text-center">新規ユーザー登録</h3>
+        <div class="form-group">
+            <div class="app-singup-frame">
+                <label for="userid" >ユーザーID</label>
+                <input class="form-control" id="userid" maxlength="20">
+                <label for="passwd">パスワード</label>
+                <input class="form-control" id="passwd" type="password" maxlength="20">
+                <label for="email">メールアドレス</label>
+                <input class="form-control" id="email" type="email">
+                <button type="button" class="btn btn-primary app-register-btn">登録</button>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
 
 <script src="lib/jquery/dist/jquery.js"></script>
 <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
