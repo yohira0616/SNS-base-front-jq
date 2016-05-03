@@ -7,6 +7,8 @@ var sass = require('gulp-sass');
 var uglify = require('gulp-uglify');
 var babel = require('gulp-babel');
 var plumber = require('gulp-plumber');
+var webpack = require('gulp-webpack');
+var wpConfig = require('./webpack.config');
 /**
  * other plugins
  */
@@ -18,11 +20,11 @@ var runSequence = require('run-sequence');
 gulp.task('js', function () {
   return gulp.src('src/scripts/**.js')
     .pipe(plumber())
-    .pipe(concat('bundle.min.js'))
+    .pipe(webpack(wpConfig))
     .pipe(babel({
       presets: ['es2015']
     }))
-    .pipe(uglify())
+    //.pipe(uglify())
     .pipe(gulp.dest('public/js'));
 });
 
@@ -66,7 +68,7 @@ gulp.task('watch', function () {
   gulp.watch('src/scss/**/*.scss', ['scss', 'server:reload']);
 });
 
-gulp.task('develop',function (callback) {
+gulp.task('develop', function (callback) {
   return runSequence(
     'build',
     'server:init',

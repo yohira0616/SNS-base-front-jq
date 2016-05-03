@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "develop": "node_modules/gulp/bin/gulp.js develop",
     "build": "node_modules/gulp/bin/gulp.js build",
-    "prepare":"npm install & bower install"
+    "prepare": "npm install & bower install"
   },
   "repository": {
     "type": "git",
@@ -35,6 +35,8 @@
     "gulp-plumber": "^1.1.0",
     "gulp-sass": "^2.3.1",
     "gulp-uglify": "^1.5.3",
-    "run-sequence": "^1.1.5"
+    "gulp-webpack": "^1.5.0",
+    "run-sequence": "^1.1.5",
+    "webpack": "^1.13.0"
   }
 }
