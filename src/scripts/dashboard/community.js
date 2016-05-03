@@ -1,5 +1,6 @@
 (function ($) {
   const ajaxSender = require('../common/ajax-promise-helper');
+  const sanitizer = require('../common/sanitizer');
 
   $(function () {
 

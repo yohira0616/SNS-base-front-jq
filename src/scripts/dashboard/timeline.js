@@ -3,8 +3,8 @@
   $(function () {
     window.app.userId = $.cookie('app-user-id');
     var userId = window.app.userId;
-    console.log(window.app.userId);
     const ajaxSender = require('../common/ajax-promise-helper');
+    const sanitizer = require('../common/sanitizer');
 
     $('.app-login-user-name').text(userId);
 
@@ -50,7 +50,7 @@
                         <a href="javascript:void(0);">
                             <i class="glyphicon glyphicon-trash"></i></a>
                     </div>
-                    <p class="list-group-item-text">${article.contents}</p>
+                    <p class="list-group-item-text">${sanitizer.sanitize(article.contents)}</p>
                     <p class="list-group-item-text">posted by ${article.userId}<span class="pull-right">${d.toDateString()}</span></p>
                 </div>`;
             $timeline.append($(dom));
