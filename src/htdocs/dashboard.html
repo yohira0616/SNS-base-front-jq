@@ -6,19 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
 </head>
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Project name</a>
+            <a class="navbar-brand" href="javascript:void(0);">Project name</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -33,6 +34,50 @@
         </div>
     </div>
 </nav>
+<div class="app-main-contents-area">
+    <div class="container-fluid">
+        <!-- user porfile column -->
+        <div class="col-md-4">
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">プロフィール</a></li>
+                <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">所属コミュニティ</a></li>
+                <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">フォロー</a></li>
+                <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">フォロワー</a></li>
+                <li role="presentation"><a href="#msg" aria-controls="settings" role="tab" data-toggle="tab">メッセージ</a></li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="home">プロフィール</div>
+                <div role="tabpanel" class="tab-pane" id="profile">コミュニティ</div>
+                <div role="tabpanel" class="tab-pane" id="messages">フォロー</div>
+                <div role="tabpanel" class="tab-pane" id="settings">フォロアー</div>
+                <div role="tabpanel" class="tab-pane" id="msg">フォロアー</div>
+            </div>
+        </div>
+        <!-- timeline column -->
+        <div class="col-md-4">
+            <div class="form-group">
+                <textarea class="form-control"></textarea>
+                <button class="btn btn-primary">投稿</button>
+            </div>
+            <ul class="list-group">
+                <li class="list-group-item"><p class="list-group-item-text">書き込みのタイムラインを展開</p></li>
+            </ul>
+        </div>
+        <!-- community tab -->
+        <div class="col-md-4">
+            <input class="form-control" placeholder="コミュニティを検索...">
+            <div class="list-group">
+                <a href="#" class="list-group-item">
+                    <h4 class="list-group-item-heading">コミュニティ1</h4>
+                    <p class="list-group-item-text">説明文が入ります</p>
+
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+</div>
 
 <script src="lib/jquery/dist/jquery.js"></script>
 <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
