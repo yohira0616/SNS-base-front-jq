@@ -19,17 +19,18 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="javascript:void(0);">Project name</a>
+            <a class="navbar-brand" href="javascript:void(0);">Hello! noname!</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#">Dashboard</a></li>
-                <li><a href="#">Settings</a></li>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Help</a></li>
+                <li><a href="#"><i class="glyphicon glyphicon-bell"></i> 新着</a></li>
+                <li><a href="#"><i class="glyphicon glyphicon-wrench"></i> 設定</a></li>
+                <li><a href="#"><i class="glyphicon glyphicon-envelope"></i> メッセージ</a></li>
+                <li><a href="#"><i class="glyphicon glyphicon-logout"></i> ログアウト</a></li>
             </ul>
             <form class="navbar-form navbar-right">
-                <input type="text" class="form-control" placeholder="Search...">
+                <input type="text" class="form-control" placeholder="ユーザーを検索...">
             </form>
         </div>
     </div>
@@ -39,11 +40,16 @@
         <!-- user porfile column -->
         <div class="col-md-4">
             <ul class="nav nav-tabs" role="tablist">
-                <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">プロフィール</a></li>
-                <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">所属コミュニティ</a></li>
-                <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">フォロー</a></li>
-                <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">フォロワー</a></li>
-                <li role="presentation"><a href="#msg" aria-controls="settings" role="tab" data-toggle="tab">メッセージ</a></li>
+                <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab"
+                                                          data-toggle="tab">プロフィール</a></li>
+                <li role="presentation"><a href="#profile" aria-controls="profile" role="tab"
+                                           data-toggle="tab">所属コミュニティ</a></li>
+                <li role="presentation"><a href="#messages" aria-controls="messages" role="tab"
+                                           data-toggle="tab">フォロー</a></li>
+                <li role="presentation"><a href="#settings" aria-controls="settings" role="tab"
+                                           data-toggle="tab">フォロワー</a></li>
+                <li role="presentation"><a href="#msg" aria-controls="settings" role="tab" data-toggle="tab">メッセージ</a>
+                </li>
             </ul>
             <div class="tab-content">
                 <div role="tabpanel" class="tab-pane active" id="home">プロフィール</div>
@@ -55,9 +61,11 @@
         </div>
         <!-- timeline column -->
         <div class="col-md-4">
-            <div class="form-group">
-                <textarea class="form-control"></textarea>
-                <button class="btn btn-primary">投稿</button>
+            <div class="app-article-post-frame">
+                <div class="form-group">
+                    <textarea class="form-control" id="app-article-post-txt"></textarea>
+                    <button class="btn btn-primary pull-right" id="app-article-post-btn"><i class="glyphicon glyphicon-pencil"></i> 投稿</button>
+                </div>
             </div>
             <ul class="list-group">
                 <li class="list-group-item"><p class="list-group-item-text">書き込みのタイムラインを展開</p></li>
@@ -66,6 +74,7 @@
         <!-- community tab -->
         <div class="col-md-4">
             <input class="form-control" placeholder="コミュニティを検索...">
+            <button class="btn btn-default" id="app-com-make-btn"> <i class="glyphicon glyphicon-plus"></i> 新しくコミュニティを作成</button>
             <div class="list-group">
                 <a href="#" class="list-group-item">
                     <h4 class="list-group-item-heading">コミュニティ1</h4>
@@ -80,7 +89,9 @@
 </div>
 
 <script src="lib/jquery/dist/jquery.js"></script>
+<script src="lib/jquery.cookie/jquery.cookie.js"></script>
 <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
+<script src="lib/bootstrap-growl/jquery.bootstrap-growl.min.js"></script>
 <script src="js/dashboard.bundle.js"></script>
 </body>
 </html>
