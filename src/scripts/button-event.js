@@ -3,24 +3,18 @@
   $(function () {
 
     $('#ex-button').click(()=> {
-      var SERVER_URL = 'http://localhost:8084';
-      var param={
-        userId:'admin',
-        contents:'test'
+      var param = {
+        userId: 'admin',
+        contents: 'test'
       };
-
-      $.ajax({
-        type: 'POST',
-        url: SERVER_URL + '/api/article/create',
-        data: JSON.stringify(param),
-        contentType: 'application/json',
-        dataType: 'JSON'
-      }).success(function (data) {
-        alert('done!');
-        console.log(data)
-      }).error(function (data) {
-        console.log(data)
-      })
+      var ajaxSender = require('./common/ajax-helper');
+      ajaxSender.post('/api/article/create',param).success(function (response) {
+        console.log('post done');
+        console.log(response);
+      }).error(function(error){
+        console.log('post error');
+        console.log(error);
+      });
     })
   })
 
