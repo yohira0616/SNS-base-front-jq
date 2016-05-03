@@ -25,10 +25,13 @@
       let ajaxHelper = require('../common/ajax-helper');
       ajaxHelper.post('/api/users/create', createParam)
         .success(function (response) {
-          
+          $.bootstrapGrowl("ユーザー登録が完了しました", {
+            type: 'success'
+          });
+
         }).error(function (error) {
         console.log(error);
-        window.alert('error!');
+        window.alert('何らかのエラーが発生しました');
       });
 
     });
