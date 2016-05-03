@@ -1,13 +1,26 @@
 (function ($) {
+  const ajaxSender = require('../common/ajax-promise-helper');
 
   $(function () {
 
     $('#app-new-com-save-btn').click(function () {
-
-      $.bootstrapGrowl("作成しました", {
-        type: 'success'
+      let communityName = $('#app-new-com-name').val();
+      if (!communityName) {
+        return;
+      }
+      let communityIntro = $('#app-new-com-explanation').val();
+      const param = {
+        communityName: communityName,
+        introduction: communityIntro
+      };
+      ajaxSender.post('/api/community/create', param)
+        .then((res)=> {
+          $.bootstrapGrowl("作成しました", {
+            type: 'success'
+          });
+        }).catch((err)=> {
+        console.log(err);
       });
-
     });
   });
 
