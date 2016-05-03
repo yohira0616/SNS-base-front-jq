@@ -7,13 +7,12 @@
         userId: 'admin',
         contents: 'test'
       };
-      var ajaxSender = require('./common/ajax-helper');
-      ajaxSender.post('/api/article/create',param).success(function (response) {
+      var ajaxSender = require('./common/ajax-promise-helper');
+      ajaxSender.post('/api/article/create', param).then(function (response) {
         console.log('post done');
         console.log(response);
-      }).error(function(error){
-        console.log('post error');
-        console.log(error);
+      }).catch(function (error) {
+        console.log(error)
       });
     })
   })
