@@ -52,17 +52,57 @@
                 </li>
             </ul>
             <div class="tab-content">
-                <div role="tabpanel" class="tab-pane active" id="home">プロフィール</div>
-                <div role="tabpanel" class="tab-pane" id="profile">コミュニティ</div>
-                <div role="tabpanel" class="tab-pane" id="messages">フォロー</div>
-                <div role="tabpanel" class="tab-pane" id="settings">フォロアー</div>
-                <div role="tabpanel" class="tab-pane" id="msg">フォロ</div>
+                <div role="tabpanel" class="tab-pane active" id="home">
+                    <div class="container-fluid">
+                        <div class="app-my-profile-panel">
+                            <p>ユーザーID</p>
+                            <p>ユーザー名</p>
+                            <p>プロフィール</p>
+                            <button class="btn btn-default pull-right">編集</button>
+                            <button class="btn btn-success pull-right">保存</button>
+                            <button class="btn btn-default pull-right">キャンセル</button>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="profile">
+                    コミュニティパネル
+                    <div class="container-fluid">
+                        <p>ユーザーID</p>
+                        <p>ユーザー名</p>
+                        <p>プロフィール</p>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="messages">
+                    フォローパネル
+                    <div class="container-fluid">
+                        <p>ユーザーID</p>
+                        <p>ユーザー名</p>
+                        <p>プロフィール</p>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="settings">
+                    フォロワーパネル
+                    <div class="container-fluid">
+                        <p>ユーザーID</p>
+                        <p>ユーザー名</p>
+                        <p>プロフィール</p>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="msg">
+                    メッセージパネル
+                    <div class="container-fluid">
+                        <p>ユーザーID</p>
+                        <p>ユーザー名</p>
+                        <p>プロフィール</p>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- timeline column -->
         <div class="col-md-4">
             <div class="app-article-post-frame">
                 <div class="form-group">
+                    <label for="app-article-post-txt">タイムラインへ投稿</label>
                     <textarea class="form-control" id="app-article-post-txt"></textarea>
                     <button class="btn btn-primary pull-right" id="app-article-post-btn"><i
                             class="glyphicon glyphicon-pencil"></i> 投稿
@@ -70,20 +110,14 @@
                 </div>
             </div>
             <div class="list-group" id="app-timeline">
-                <div class="list-group-item">
-                    <div class="app-timeline-post-icons" style="padding-left: 98%;">
-                        <a href="javascript:void(0);">
-                            <i class="glyphicon glyphicon-trash"></i></a>
-                    </div>
-                    <p class="list-group-item-text">書き込みのタイムラインを展開</p>
-                    <p class="list-group-item-text">posted by hoge<span class="pull-right">2016/04/01</span></p>
-                </div>
+                <!-- drawn by ajax -->
             </div>
         </div>
         <!-- community tab -->
         <div class="col-md-4">
             <input class="form-control" placeholder="コミュニティを検索...">
-            <button class="btn btn-default" id="app-com-make-btn" data-toggle="modal" data-target="#app-com-make-modal"><i class="glyphicon glyphicon-plus"></i> 新しくコミュニティを作成
+            <button class="btn btn-default" id="app-com-make-btn" data-toggle="modal" data-target="#app-com-make-modal">
+                <i class="glyphicon glyphicon-plus"></i> 新しくコミュニティを作成
             </button>
             <div class="list-group">
                 <a href="#" class="list-group-item">
@@ -100,7 +134,8 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
                         <h4 class="modal-title" id="myModalLabel">新しいコミュニティを作成</h4>
                     </div>
                     <div class="modal-body">

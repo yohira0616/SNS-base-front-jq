@@ -1,0 +1,9 @@
+@import "colors";
+
+/**
+ 枠付されたコンポーネントを定義します
+ **/
+@mixin app-framed-element{
+  border: 1px solid $bs-frame-gray;
+  border-radius: 4px;
+}
