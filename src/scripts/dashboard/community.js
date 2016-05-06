@@ -23,6 +23,13 @@
         console.log(err);
       });
     });
+
+    /**
+     * 保存されているコミュニティ一覧を読み込みます
+     */
+    function loadCommunities() {
+
+    }
   });
 
 })(window.jQuery);
