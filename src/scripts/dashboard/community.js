@@ -5,6 +5,7 @@
   $(function () {
 
     loadCommunities();
+    const $modal=$('#app-com-make-modal');
 
     $('#app-new-com-save-btn').click(function () {
       let communityName = $('#app-new-com-name').val();
@@ -18,9 +19,11 @@
       };
       ajaxSender.post('/api/community/create', param)
         .then((res)=> {
+          loadCommunities();
           $.bootstrapGrowl("作成しました", {
             type: 'success'
           });
+          $modal.modal('hide');
         }).catch((err)=> {
         console.log(err);
       });
