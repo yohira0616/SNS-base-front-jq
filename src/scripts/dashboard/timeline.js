@@ -45,9 +45,10 @@
             var d = new Date(article.postDate);
             var dom = `
                  <div class="list-group-item">
-                    <div class="app-timeline-post-icons" style="padding-left: 98%;">
+                    <div class="app-timeline-post-icons" style="padding-left: 92%;">
                         <a href="javascript:void(0);">
-                            <i class="glyphicon glyphicon-trash"></i>
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                            <span class="glyphicon glyphicon-trash"></span>    
                         </a>
                     </div>
                     <p class="list-group-item-text">${sanitizer.sanitize(article.contents)}</p>
