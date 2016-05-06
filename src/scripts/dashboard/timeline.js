@@ -43,12 +43,12 @@
           $timeline.empty();
           articles.forEach((article)=> {
             var d = new Date(article.postDate);
-            //TODO XSS handling
             var dom = `
                  <div class="list-group-item">
                     <div class="app-timeline-post-icons" style="padding-left: 98%;">
                         <a href="javascript:void(0);">
-                            <i class="glyphicon glyphicon-trash"></i></a>
+                            <i class="glyphicon glyphicon-trash"></i>
+                        </a>
                     </div>
                     <p class="list-group-item-text">${sanitizer.sanitize(article.contents)}</p>
                     <p class="list-group-item-text">posted by ${article.userId}<span class="pull-right">${d.toDateString()}</span></p>
