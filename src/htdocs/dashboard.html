@@ -55,12 +55,14 @@
                 <div role="tabpanel" class="tab-pane active" id="home">
                     <div class="container-fluid">
                         <div class="app-my-profile-panel">
-                            <p>ユーザーID</p>
-                            <p>ユーザー名</p>
+                            <p>ユーザーID <span id="app-my-porfile-user-id"></span></p>
+                            <p>ユーザー名 <span id="app-my-profile-user-name-text">ななしさん</span><input class="form-control" id="app-my-profile-user-name-edit"></p>
                             <p>プロフィール</p>
-                            <button class="btn btn-default pull-right">編集</button>
-                            <button class="btn btn-success pull-right">保存</button>
-                            <button class="btn btn-default pull-right">キャンセル</button>
+                            <p id="app-my-profile-self-intro-text">自己紹介文をここに記述</p>
+                            <textarea class="form-control" id="app-my-profile-self-intro-edit"></textarea>
+                            <button class="btn btn-default pull-right" id="app-my-profile-edit-button">編集</button>
+                            <button class="btn btn-success pull-right" id="app-my-profile-save-button">保存</button>
+                            <button class="btn btn-default pull-right" id="app-my-profile-abort-button">キャンセル</button>
                         </div>
                     </div>
                 </div>
