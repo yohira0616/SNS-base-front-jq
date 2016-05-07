@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/user-search.css">
 </head>
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -39,14 +39,9 @@
     <div class="container">
         <!-- user searchs page -->
         <div class="col-md-8 col-md-offset-2">
-            <input class="form-control" placeholder="ユーザーを検索">
+            <input class="form-control" placeholder="ユーザーを検索..." id="app-user-search-input">
             <div class="list-group" id="app-user-list">
-                <a href="#" class="list-group-item" data-community-id="-1">
-                    <h4 class="list-group-item-heading">テストユーザー1</h4>
-                    <button class="btn btn-primary pull-right"><i class="glyphicon glyphicon-plus"></i> </button>
-                    <p class="list-group-item-text">趣味は料理です</p>
-
-                </a>
+                <!-- draw by ajax -->
 
             </div>
         </div>

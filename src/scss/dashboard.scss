@@ -1,13 +1,9 @@
 @import "bs-common/colors";
 @import "bs-common/base-components";
+@import "common/frame";
 
 textarea {
   resize: none;
-}
-
-.app-main-contents-area {
-  margin-top: 60px;
-
 }
 
 .app-article-post-frame {

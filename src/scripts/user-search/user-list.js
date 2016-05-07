@@ -19,9 +19,7 @@ module.exports = (function ($) {
               <p class="list-group-item-text">${sanitizer.sanitize(userListViewModel.userProf.selfIntro)}</p>
               </a>`;
           $userList.append(dom);
-
         });
-        console.log(res);
       });
 
 
