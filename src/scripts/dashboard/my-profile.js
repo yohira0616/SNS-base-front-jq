@@ -6,7 +6,7 @@
   const UserProf = require('../viewmodel/user-profile');
 
   $(function () {
-    const identifier = require('../common/user-ifentifier');
+    const identifier = require('../common/user-identifier');
     const userId = identifier.getMockUser();
 
     const $saveBtn = $('#app-my-profile-save-button');
