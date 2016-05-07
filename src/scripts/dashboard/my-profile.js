@@ -34,11 +34,20 @@
     });
 
     $saveBtn.click(()=> {
-
-      $.bootstrapGrowl('保存しました', {
-        type: 'success'
+      let param = new UserProf(userId, $userNameEdit.val(), $selfIntroEdit.val());
+      ajaxSender.post('/api/users/profile/update', param)
+        .then((res)=> {
+          $.bootstrapGrowl('保存しました', {
+            type: 'success'
+          });
+          $userNameText.text(param.userName);
+          $selfIntroText.text(param.selfIntro);
+          readonlymode();
+        }).catch((error)=> {
+        console.log(error);
       });
-      readonlymode();
+
+
     });
 
     $abortBtn.click(()=> {
@@ -70,8 +79,8 @@
       ajaxSender.get('/api/users/profile/getprof/' + userId)
         .then((res)=> {
           let userProf = new UserProf(res.userId, res.userName, res.selfIntro);
-          $selfIntroText.text(userProf.userName);
-          $userNameText.text(userProf.selfIntro);
+          $selfIntroText.text(userProf.selfIntro);
+          $userNameText.text(userProf.userName);
           console.log(userProf);
         }).catch((error)=> {
         console.log(error);
