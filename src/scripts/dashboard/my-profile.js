@@ -3,6 +3,7 @@
  */
 (function ($) {
   const ajaxSender = require('../common/ajax-promise-helper');
+  const UserProf = require('../viewmodel/user-profile');
 
   $(function () {
     const identifier = require('../common/user-ifentifier');
@@ -26,9 +27,10 @@
     $selfIntroEdit.hide();
     $userNameEdit.hide();
 
+    loadUserInfo(userId);
+
     $editBtn.click(()=> {
       editmode();
-
     });
 
     $saveBtn.click(()=> {
@@ -64,12 +66,20 @@
       $userNameEdit.hide();
     }
 
+    function loadUserInfo(userId) {
+      ajaxSender.get('/api/users/profile/getprof/' + userId)
+        .then((res)=> {
+          let userProf = new UserProf(res.userId, res.userName, res.selfIntro);
+          $selfIntroText.text(userProf.userName);
+          $userNameText.text(userProf.selfIntro);
+          console.log(userProf);
+        }).catch((error)=> {
+        console.log(error);
+      })
+    }
+
 
   });
 
-  function loadUserInfo(userId) {
-    //ajaxSender.get('/api/users/')
-
-  }
 
 })(window.jQuery);
