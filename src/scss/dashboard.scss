@@ -19,19 +19,6 @@ textarea {
   margin-bottom: 5px;
 }
 
-.app-my-profile-panel {
-  @include app-framed-element;
-  margin: {
-    top: 5px;
-  }
-  padding: {
-    top: 5px;
-    left: 5px;
-    right: 5px;
-    bottom: 40px;
-  }
-}
-
 #app-my-profile-self-intro-edit{
   margin-bottom: 10px;
 }
@@ -47,4 +34,8 @@ textarea {
     left: 64%;
     bottom: 5px;
   }
+}
+
+.app-left-tab{
+  margin-bottom: 10px;
 }

@@ -35,62 +35,90 @@
         </div>
     </div>
 </nav>
+<!-- main contents -->
 <div class="app-main-contents-area">
     <div class="container-fluid">
         <!-- user porfile column -->
         <div class="col-md-4">
-            <ul class="nav nav-tabs" role="tablist">
-                <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab"
+            <ul class="nav nav-tabs app-left-tab" role="tablist">
+                <li role="presentation" class="active"><a href="#app-tab-profile" aria-controls="app-tab-profile" role="tab"
                                                           data-toggle="tab">プロフィール</a></li>
-                <li role="presentation"><a href="#profile" aria-controls="profile" role="tab"
+                <li role="presentation"><a href="#app-tab-community" aria-controls="app-tab-community" role="tab"
                                            data-toggle="tab">所属コミュニティ</a></li>
-                <li role="presentation"><a href="#messages" aria-controls="messages" role="tab"
+                <li role="presentation"><a href="#app-tab-follow" aria-controls="app-tab-follow" role="tab"
                                            data-toggle="tab">フォロー</a></li>
-                <li role="presentation"><a href="#settings" aria-controls="settings" role="tab"
+                <li role="presentation"><a href="#app-tab-follower" aria-controls="app-tab-follower" role="tab"
                                            data-toggle="tab">フォロワー</a></li>
-                <li role="presentation"><a href="#msg" aria-controls="settings" role="tab" data-toggle="tab">メッセージ</a>
+                <li role="presentation"><a href="#app-tab-message" aria-controls="app-tab-message" role="tab" data-toggle="tab">メッセージ</a>
                 </li>
             </ul>
             <div class="tab-content">
-                <div role="tabpanel" class="tab-pane active" id="home">
-                    <div class="container-fluid">
-                        <div class="app-my-profile-panel">
+                <div role="tabpanel" class="tab-pane active" id="app-tab-profile">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
                             <p><h4>ユーザーID</h4> <span id="app-my-porfile-user-id"></span></p>
-                            <p><h4>ユーザー名</h4> <span id="app-my-profile-user-name-text"></span><input class="form-control" id="app-my-profile-user-name-edit"></p>
+                            <p><h4>ユーザー名</h4> <span id="app-my-profile-user-name-text"></span><input
+                                class="form-control" id="app-my-profile-user-name-edit"></p>
                             <p><h4>プロフィール</h4></p>
                             <p id="app-my-profile-self-intro-text"></p>
                             <textarea class="form-control" id="app-my-profile-self-intro-edit"></textarea>
-                            <button class="btn btn-default pull-right" id="app-my-profile-edit-button">編集</button>
-                            <button class="btn btn-success pull-right" id="app-my-profile-save-button">保存</button>
-                            <button class="btn btn-default pull-right" id="app-my-profile-abort-button">キャンセル</button>
+                            <button class="btn btn-default pull-right" id="app-my-profile-edit-button">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                編集
+                            </button>
+                            <button class="btn btn-success pull-right" id="app-my-profile-save-button">
+                                <span class="glyphicon glyphicon-save"></span>
+                                保存
+                            </button>
+                            <button class="btn btn-default pull-right" id="app-my-profile-abort-button">
+
+                                キャンセル
+                            </button>
                         </div>
                     </div>
                 </div>
-                <div role="tabpanel" class="tab-pane" id="profile">
-                    コミュニティパネル
-                    <div class="container-fluid">
-                        <p>ユーザーID</p>
-                        <p>ユーザー名</p>
-                        <p>プロフィール</p>
+                <div role="tabpanel" class="tab-pane" id="app-tab-community">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <p>所属しているコミュニティ一覧</p>
+                            <div class="list-group">
+                                <div class="list-group-item">
+                                    <p>hoge</p>
+                                </div>
+
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-                <div role="tabpanel" class="tab-pane" id="messages">
-                    フォローパネル
-                    <div class="container-fluid">
-                        <p>ユーザーID</p>
-                        <p>ユーザー名</p>
-                        <p>プロフィール</p>
+                <div role="tabpanel" class="tab-pane" id="app-tab-follow">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <p>フォロー：</p>
+                            <div class="list-group">
+                                <div class="list-group-item">
+                                    <p>hoge</p>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-                <div role="tabpanel" class="tab-pane" id="settings">
-                    フォロワーパネル
-                    <div class="container-fluid">
-                        <p>ユーザーID</p>
-                        <p>ユーザー名</p>
-                        <p>プロフィール</p>
+                <div role="tabpanel" class="tab-pane" id="app-tab-follower">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <p>フォワー：</p>
+                            <div class="list-group">
+                                <div class="list-group-item">
+                                    <p>fuga</p>
+                                </div>
+
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-                <div role="tabpanel" class="tab-pane" id="msg">
+                <div role="tabpanel" class="tab-pane" id="app-tab-message">
                     <div class="alert alert-info">クリックすることで、そのユーザーとのメッセージのやりとりを表示します</div>
                     <div class="list-group" id="app-my-message-list">
                         <a href="#" class="list-group-item" data-community-id="-1">
@@ -117,6 +145,27 @@
             <div class="list-group" id="app-timeline">
                 <!-- drawn by ajax -->
             </div>
+            <div class="col-md-6 col-md-offset-3">
+                <nav>
+                    <ul class="pagination">
+                        <li>
+                            <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
         <!-- community tab -->
         <div class="col-md-4">
@@ -125,11 +174,7 @@
                 <i class="glyphicon glyphicon-plus"></i> 新しくコミュニティを作成
             </button>
             <div class="list-group" id="app-com-list">
-                <a href="#" class="list-group-item" data-community-id="-1">
-                    <h4 class="list-group-item-heading">コミュニティ1</h4>
-                    <p class="list-group-item-text">説明文が入ります</p>
-
-                </a>
+                <!-- draw by ajax -->
 
             </div>
         </div>
